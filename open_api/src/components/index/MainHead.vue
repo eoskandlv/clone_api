@@ -124,7 +124,6 @@ export default {
         right: 0px;
         bottom: 0px;
         opacity: 0.9;
-        /* width: 1920px; */
     }
     &__wrap {
         width: 100%;

@@ -14,7 +14,6 @@
                 <div 
                     @click="moveSection('main-head')" 
                     class="sidebar-wrap__menu"
-                    :class="{ 'active-color': colorTrue }"
                 >
                     <div class="sidebar-wrap__icon" >
                         01
@@ -66,7 +65,6 @@
 export default {
     data() {
         return {
-            colorTrue : false,
         }
     },
     methods: {
@@ -117,14 +115,9 @@ export default {
             padding: 20px 0;
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
-            &:active {
-				color: #75A2FF;
-				font-weight: bold;
-			}
 		}
+        &__icon {
+            
+        }
 	}
-    .active-color {
-        color: #75A2FF;
-        font-weight: bold;
-    }
 </style>

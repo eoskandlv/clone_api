@@ -1,33 +1,20 @@
 <template>
-    <div class="first-index">
-        <div class="first-index__wrap">
-            <div class="first-index__title">
-                <span data-aos="fade-up">MARKER</span>
-            </div>
-            <div class="first-index__content" data-aos="fade-up" data-aos-delay="400">
-                <div class="first-index__content__left">
-                    <v-icon
-                        class="back-marker"
-                        size="400px"
-                    >
-                        mdi-map-marker-radius-outline
-                    </v-icon>
+    <div class="second-index">
+        <div class="second-index__wrap">
+            <div class="second-index__content" data-aos="fade-up" data-aos-delay="400">
+                <div class="second-index__content__left">
                     <div class="left-wrap">
                         <div class="left-wrap__text">
-                            <h1>자유로운 형태의<br> 마커를 올려보세요.</h1>
-                            <p>지도 위에 마커를 올려서 특정 장소를 <br> 표시할 수 있고
-                                장소 명칭이나 간단한 소개글도 <br> 함께 표시할 수 있습니다.
+                            <h1>친환경 공유 우산 위브렐라</h1>
+                            <p>이젠, 사지말고 공유하자! 탄소절감 친한경 우산 쉐어링 플랫폼<br>
+                                위브렐라에 방문해보세요!
                             </p>
                         </div>
-                        <v-btn class="sample-btn">
-                            sample
-                            <v-icon large>
-                                mdi-arrow-right
-                            </v-icon>
-                        </v-btn>
                     </div>
                 </div>
-                <div class="first-index__content__right">
+                <div class="second-index__content__right">
+                    <img src="@/assets/img/webella.png" alt="">
+                    <img src="@/assets/img/webrella-get.png" alt="">
                 </div>
             </div>
         </div>
@@ -40,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .first-index {
+    .second-index {
         position: relative;
         width: 100%;
         height: 100vh;
@@ -60,10 +47,11 @@ export default {
         }
         &__content {
             display: flex;
+            border-bottom: 3px solid #fff;
             &__left {
-                width: 600px;
-                height: 650px;
-                background: #75A2FF;
+                width: 700px;
+                height: 300px;
+                /* background: #75A2FF; */
                 .back-marker {
                     position: absolute;
                     bottom: 100px;
@@ -75,18 +63,18 @@ export default {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    padding: 80px;
+                    padding: 60px;
                     height: 100%;
                     &__text {
                         color: #fff;
                         >h1 {
                             font-family: 'notosanskr', sans-serif;
-                            font-size: 55px;
+                            font-size: 50px;
                             font-weight: 800;
                             line-height: 1.2;
-                            margin-bottom: 40px;
+                            margin-bottom: 30px;
                         }
-                        >p { font-size: 22px; }
+                        >p { font-size: 18px; }
                     }
                     .sample-btn {
                         display: flex;
@@ -103,10 +91,13 @@ export default {
                 }
             }
             &__right {
-                width: 600px;
-                height: 650px;
-                background: #fff;
-                background: url("@/assets/img/marker-map.png");
+                width: 500px;
+                height: 300px;
+               >img {
+                    width: 150px;
+                    margin-right: 70px;
+               }
+
             }
         }
     }
