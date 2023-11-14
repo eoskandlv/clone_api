@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
     .user-view-guard {
-        width: calc(100% - 250px);
+        width: calc(100% - 80px);
         min-width: 1024px;
         margin-left: 80px;
     }

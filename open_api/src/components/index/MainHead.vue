@@ -110,7 +110,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Noto+Sans+KR:wght@300;400&display=swap');
 .main-head {
     position: relative;
     width: 100%;
@@ -125,14 +124,14 @@ export default {
         right: 0px;
         bottom: 0px;
         opacity: 0.9;
-        width: 1920px;
+        /* width: 1920px; */
     }
     &__wrap {
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
-        margin-left: 150px;
+        margin-left: 120px;
     }
     &__left {
         width: 100%;
@@ -167,6 +166,7 @@ export default {
         left: 0;
         text-align: right;
         color: #fff;
+        margin-right: 130px;
         span {
             letter-spacing: 0px;
             display: block;
@@ -202,13 +202,13 @@ export default {
     &__top {
         position: absolute;
         top: 100px;
-        left: 150px;
+        left: 100px;
 
     }
     &__bottom {
         position: absolute;
         bottom: 100px;
-        right: 0;
+        right: 100px;
     }
     &__item{
         animation: motion 0.5s linear 0s  infinite alternate;

@@ -11,14 +11,19 @@
 	<div class="sidebar">
         <div class="sidebar-wrap">
             <div class="sidebar-wrap__item">
-                <router-link to="/" class="sidebar-wrap__menu">
-                    <div class="sidebar-wrap__icon">
+                <div 
+                    @click="moveSection('main-head')" 
+                    class="sidebar-wrap__menu"
+                    :class="{ 'active-color': colorTrue }"
+                >
+                    <div class="sidebar-wrap__icon" >
                         01
                     </div>
-                </router-link>
+                </div>
             </div>
             <div class="sidebar-wrap__item">
-                <div class="sidebar-wrap__menu">
+                <div 
+                    @click="moveSection('first-index')" class="sidebar-wrap__menu">
                     <div class="sidebar-wrap__icon">
                         02
                     </div>
@@ -59,30 +64,28 @@
 <script>
 
 export default {
-	data() {
-		return {
-			routeMapping: {
-				"webManage": 0,
-				"businessManage": 2,
-			}
-		}
-	},
-	mounted() {
-		// 새로고침시 데이터 복원
-        const currentBase = this.$route.path.substring(1).split("/", 2);
-        if (this.routeMapping[currentBase[1]] !== undefined) {
-            this.dropClick(this.routeMapping[currentBase[1]]);
+    data() {
+        return {
+            colorTrue : false,
         }
-	},
-	methods: {
-		
-	}
+    },
+    methods: {
+        /**********************************************************************
+         *  @method     : 해당 엘리먼트 요소로 스크롤 이동
+         *  @param      { string }      :className
+         *  @returns    { undefined }
+         *********************************************************************/
+        moveSection(className) {
+            let posY = document.querySelector("." + className).offsetTop;
+            window.scrollTo({ top: posY, behavior: 'smooth' })
+          
+        },
+        
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Noto+Sans+KR:wght@300;400&display=swap');
-
 	.sidebar {
 		display: flex;
 		flex-direction: column;
@@ -114,10 +117,14 @@ export default {
             padding: 20px 0;
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
-            &.router-link-active {
+            &:active {
 				color: #75A2FF;
 				font-weight: bold;
 			}
 		}
-	} 
+	}
+    .active-color {
+        color: #75A2FF;
+        font-weight: bold;
+    }
 </style>
