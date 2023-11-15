@@ -6,16 +6,56 @@
                     <div class="left-wrap">
                         <div class="left-wrap__text">
                             <h1>친환경 공유 우산 위브렐라</h1>
-                            <p>이젠, 사지말고 공유하자! 탄소절감 친한경 우산 쉐어링 플랫폼<br>
-                                위브렐라에 방문해보세요!
+                            <p>우산 소지가 필요없는 스마트시티, 우산 사요의 패러다임 혁신, 대한민국 최초<br>
+                                IOT기반 스마트 공유함을 활용한 친환경 공유우산 서비스입니다.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="second-index__content__right">
-                    <img src="@/assets/img/webella.png" alt="">
-                    <img src="@/assets/img/webrella-get.png" alt="">
+                    <img src="@/assets/img/webrella.png" style="width: 350px;" alt="">
+                    <!-- <img src="@/assets/img/webrella-get.png" alt=""> -->
                 </div>
+            </div>
+             <div class="second-index__content" data-aos="fade-up" data-aos-delay="400">
+                <div class="second-index__content__left">
+                    <div class="left-wrap">
+                        <div class="left-wrap__text">
+                            <h1>소유에서 공유로, 세종 어울링</h1>
+                            <p>공유 가능한 퍼스널 모빌리티 대여, 반납, 결제 플랫폼으로 사용자 관리와<br>
+                                자전거 위치정보를 통한 모빌리티 통합 관리 시스템입니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-index__content__right">
+                    <img src="@/assets/img/eouling-02.png" alt="">
+                    <img src="@/assets/img/eouling-01.png" alt="">
+                    <img src="@/assets/img/eouling-03.png" alt="">
+                </div>
+            </div>
+             <div class="second-index__content" data-aos="fade-up" data-aos-delay="400">
+                <div class="second-index__content__left">
+                    <div class="left-wrap">
+                        <div class="left-wrap__text">
+                            <h1>수요응답형 대중교통 DRT</h1>
+                            <p>대중교통의 효율을 극대화 한 모빌리티 플랫폼으로 지역 특성과 환경을<br>
+                                고려한 맞춤형 시스템입니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-index__content__right">
+                    <img src="@/assets/img/drt-01.png" alt="">
+                    <img src="@/assets/img/drt-02.png" alt="">
+                    <img src="@/assets/img/drt-03.png" alt="">
+                </div>
+            </div>
+            <div class="second-index__text">
+                <span>TAKE YOUR BUSINESS TO THE NEXT LEVEL&nbsp;</span>
+                <span>TAKE YOUR BUSINESS TO THE NEXT LEVEL&nbsp;</span>
+                <span>TAKE YOUR BUSINESS TO THE NEXT LEVEL&nbsp;</span>
+                <span>TAKE YOUR BUSINESS TO THE NEXT LEVEL&nbsp;</span>
             </div>
         </div>
     </div>
@@ -30,14 +70,13 @@ export default {
     .second-index {
         position: relative;
         width: 100%;
-        height: 100vh;
         background: #000;
         &__wrap {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100%;
+            padding: 100px 0;
         }
         &__title {
             color: #fff;
@@ -48,6 +87,7 @@ export default {
         &__content {
             display: flex;
             border-bottom: 3px solid #fff;
+            margin-bottom: 150px;
             &__left {
                 width: 700px;
                 height: 300px;
@@ -93,18 +133,42 @@ export default {
             &__right {
                 width: 500px;
                 height: 300px;
+                display: flex;
+                align-items: center;
                >img {
                     width: 150px;
-                    margin-right: 70px;
                }
 
             }
         }
+        &__text {
+            color: #fff;
+            font-size: 130px;
+            display: flex;
+            flex: 0 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 120s linear infinite;
+            >span {
+                color: #fff;
+                opacity: 0.1;
+            }
+        }
+    }
+    @keyframes marquee {
+        0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+        }
     }
     @keyframes fadeUp {
-    to {
-        transform: translateY(0);
-        opacity: 1;
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
-}
 </style>

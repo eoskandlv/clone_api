@@ -4,7 +4,7 @@
             <div class="first-index__title">
                 <span data-aos="fade-up">MARKER</span>
             </div>
-            <div class="first-index__content" data-aos="fade-up" data-aos-delay="400">
+            <div class="first-index__content" data-aos="fade-up" data-aos-delay="600">
                 <div class="first-index__content__left">
                     <v-icon
                         class="back-marker"
@@ -67,7 +67,7 @@ export default {
                 .back-marker {
                     position: absolute;
                     bottom: 100px;
-                    right: 750px;
+                    right: 880px;
                     color: #fff;
                     opacity: 0.08;
                 }

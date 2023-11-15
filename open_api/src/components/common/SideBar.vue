@@ -22,14 +22,19 @@
             </div>
             <div class="sidebar-wrap__item">
                 <div 
-                    @click="moveSection('first-index')" class="sidebar-wrap__menu">
+                    @click="moveSection('first-index')" 
+                    class="sidebar-wrap__menu"
+                >
                     <div class="sidebar-wrap__icon">
                         02
                     </div>
                 </div>
             </div>
             <div class="sidebar-wrap__item">
-                <div class="sidebar-wrap__menu">
+                <div 
+                    @click="moveSection('second-index')" 
+                    class="sidebar-wrap__menu"
+                >
                     <div class="sidebar-wrap__icon">
                         03
                     </div>
