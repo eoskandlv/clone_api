@@ -15,7 +15,10 @@
                     @click="moveSection('main-head')" 
                     class="sidebar-wrap__menu"
                 >
-                    <div class="sidebar-wrap__icon" >
+                    <div 
+                        class="sidebar-wrap__icon" 
+                        :class="{ 'sidebar-wrap__icon--selected': selectedSection === 'main-head' }"
+                    >
                         01
                     </div>
                 </div>
@@ -25,7 +28,10 @@
                     @click="moveSection('first-index')" 
                     class="sidebar-wrap__menu"
                 >
-                    <div class="sidebar-wrap__icon">
+                    <div 
+                        class="sidebar-wrap__icon"
+                        :class="{ 'sidebar-wrap__icon--selected': selectedSection === 'first-index' }"
+                    >
                         02
                     </div>
                 </div>
@@ -35,7 +41,10 @@
                     @click="moveSection('second-index')" 
                     class="sidebar-wrap__menu"
                 >
-                    <div class="sidebar-wrap__icon">
+                    <div 
+                        class="sidebar-wrap__icon"
+                        :class="{ 'sidebar-wrap__icon--selected': selectedSection === 'second-index' }"
+                    >
                         03
                     </div>
                 </div>
@@ -45,7 +54,10 @@
                     @click="moveSection('third-index')" 
                     class="sidebar-wrap__menu"
                 >
-                    <div class="sidebar-wrap__icon">
+                    <div 
+                        class="sidebar-wrap__icon"
+                        :class="{ 'sidebar-wrap__icon--selected': selectedSection === 'third-index' }"
+                    >
                         04
                     </div>
                 </div>
@@ -55,7 +67,10 @@
                     @click="moveSection('fourth-index')" 
                     class="sidebar-wrap__menu"
                 >
-                    <div class="sidebar-wrap__icon">
+                    <div 
+                        class="sidebar-wrap__icon"
+                        :class="{ 'sidebar-wrap__icon--selected': selectedSection === 'fourth-index' }"
+                    >
                         05
                     </div>
                 </div>
@@ -65,7 +80,10 @@
                 class="sidebar-wrap__item"
             >
                 <div class="sidebar-wrap__menu">
-                    <div class="sidebar-wrap__icon">
+                    <div 
+                        class="sidebar-wrap__icon"
+                        :class="{ 'sidebar-wrap__icon--selected': selectedSection === 'fifth-index' }"
+                    >
                         06
                     </div>
                 </div>
@@ -79,9 +97,34 @@
 export default {
     data() {
         return {
+            selectedSection: ''
         }
     },
+    mounted() {
+        window.addEventListener('scroll', this.detectCurrentSection);
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.detectCurrentSection);
+    },
     methods: {
+         /**********************************************************************
+         *  @method     : 스크롤 시 현재 섹션 감지
+         *  @returns    { undefined }
+         *********************************************************************/
+        detectCurrentSection() {
+            const sections = ['main-head', 'first-index', 'second-index', 'third-index', 'fourth-index', 'fifth-index'];
+
+            for (const section of sections) {
+                const element = document.querySelector("." + section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                        this.selectedSection = section;
+                        break;
+                    }
+                }
+            }
+        },
         /**********************************************************************
          *  @method     : 해당 엘리먼트 요소로 스크롤 이동
          *  @param      { string }      :className
@@ -131,7 +174,10 @@ export default {
             font-family: 'Montserrat', sans-serif;
 		}
         &__icon {
-            
+            color: #fff;
+        }
+         &__icon--selected {
+            color: #75A2FF; 
         }
 	}
 </style>
