@@ -78,12 +78,6 @@ export default {
             justify-content: center;
             padding: 100px 0;
         }
-        &__title {
-            color: #fff;
-            margin-bottom: 40px;
-            >span { font-size: 60px; }
-            
-        }
         &__content {
             display: flex;
             border-bottom: 3px solid #fff;
@@ -91,14 +85,6 @@ export default {
             &__left {
                 width: 700px;
                 height: 300px;
-                /* background: #75A2FF; */
-                .back-marker {
-                    position: absolute;
-                    bottom: 100px;
-                    right: 750px;
-                    color: #fff;
-                    opacity: 0.08;
-                }
                 .left-wrap {
                     display: flex;
                     flex-direction: column;
@@ -115,18 +101,6 @@ export default {
                             margin-bottom: 30px;
                         }
                         >p { font-size: 18px; }
-                    }
-                    .sample-btn {
-                        display: flex;
-                        justify-content: space-between;
-                        width: 280px; 
-                        height: 60px;
-                        padding: 0 30px;
-                        border: 2px solid #fff;
-                        border-radius: 40px;
-                        color: #fff;
-                        background: #75A2FF;
-                        font-size: 24px;
                     }
                 }
             }
@@ -164,12 +138,6 @@ export default {
         100% {
             -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-50%, 0, 0);
-        }
-    }
-    @keyframes fadeUp {
-        to {
-            transform: translateY(0);
-            opacity: 1;
         }
     }
 </style>

@@ -5,9 +5,9 @@
                 <span data-aos="fade-up">CONTENT</span>
             </div>
             <div class="third-index__content" data-aos="fade-up" data-aos-delay="200">
-                <div class="third-index__content__right">
-                </div>
                 <div class="third-index__content__left">
+                </div>
+                <div class="third-index__content__right">
                     <div class="left-wrap">
                         <div class="left-wrap__text">
                             <h1>원하는 컨텐츠를<br> 표시할 수 있습니다.</h1>
@@ -57,6 +57,12 @@ export default {
             &__left {
                 width: 600px;
                 height: 650px;
+                background: #fff;
+                background: url("@/assets/img/marker-map.png");
+            }
+            &__right {
+                width: 600px;
+                height: 650px;
                 background: url("@/assets/img/third-back.png");
 
                 .left-wrap {
@@ -89,18 +95,6 @@ export default {
                     }
                 }
             }
-            &__right {
-                width: 600px;
-                height: 650px;
-                background: #fff;
-                background: url("@/assets/img/marker-map.png");
-            }
         }
     }
-    @keyframes fadeUp {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 </style>

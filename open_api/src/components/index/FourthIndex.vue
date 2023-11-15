@@ -105,10 +105,4 @@ export default {
             }
         }
     }
-    @keyframes fadeUp {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 </style>

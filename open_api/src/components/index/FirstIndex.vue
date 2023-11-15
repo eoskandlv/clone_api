@@ -58,7 +58,6 @@ export default {
                 width: 600px;
                 height: 650px;
                 background: url("@/assets/img/first-back.png");
-
                 .left-wrap {
                     display: flex;
                     flex-direction: column;

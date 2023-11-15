@@ -42,6 +42,12 @@ export default {
         width: 100%;
         height: 100%;
         background: #000;
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         &__text {
             color: #fff;
             font-size: 130px;
@@ -62,12 +68,6 @@ export default {
                 letter-spacing: -1px;
                 }
             }
-        }
-        &__wrap {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
         &__title {
             color: #fff;
