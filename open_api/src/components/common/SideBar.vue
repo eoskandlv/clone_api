@@ -41,20 +41,29 @@
                 </div>
             </div>
             <div class="sidebar-wrap__item">
-                <div class="sidebar-wrap__menu">
+                <div 
+                    @click="moveSection('third-index')" 
+                    class="sidebar-wrap__menu"
+                >
                     <div class="sidebar-wrap__icon">
                         04
                     </div>
                 </div>
             </div>
             <div class="sidebar-wrap__item">
-                <div class="sidebar-wrap__menu">
+                <div 
+                    @click="moveSection('fourth-index')" 
+                    class="sidebar-wrap__menu"
+                >
                     <div class="sidebar-wrap__icon">
                         05
                     </div>
                 </div>
             </div>
-            <div class="sidebar-wrap__item">
+            <div
+                @click="moveSection('fifth-index')"  
+                class="sidebar-wrap__item"
+            >
                 <div class="sidebar-wrap__menu">
                     <div class="sidebar-wrap__icon">
                         06

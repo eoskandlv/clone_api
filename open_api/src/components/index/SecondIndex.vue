@@ -1,7 +1,7 @@
 <template>
     <div class="second-index">
         <div class="second-index__wrap">
-            <div class="second-index__content" data-aos="fade-up" data-aos-delay="400">
+            <div class="second-index__content" data-aos="fade-up" data-aos-delay="200">
                 <div class="second-index__content__left">
                     <div class="left-wrap">
                         <div class="left-wrap__text">
@@ -17,7 +17,7 @@
                     <!-- <img src="@/assets/img/webrella-get.png" alt=""> -->
                 </div>
             </div>
-             <div class="second-index__content" data-aos="fade-up" data-aos-delay="400">
+             <div class="second-index__content" data-aos="fade-up" data-aos-delay="200">
                 <div class="second-index__content__left">
                     <div class="left-wrap">
                         <div class="left-wrap__text">
@@ -34,7 +34,7 @@
                     <img src="@/assets/img/eouling-03.png" alt="">
                 </div>
             </div>
-             <div class="second-index__content" data-aos="fade-up" data-aos-delay="400">
+             <div class="second-index__content" data-aos="fade-up" data-aos-delay="200">
                 <div class="second-index__content__left">
                     <div class="left-wrap">
                         <div class="left-wrap__text">
@@ -135,6 +135,7 @@ export default {
                 height: 300px;
                 display: flex;
                 align-items: center;
+
                >img {
                     width: 150px;
                }

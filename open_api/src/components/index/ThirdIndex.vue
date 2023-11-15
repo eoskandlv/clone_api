@@ -1,16 +1,18 @@
 <template>
-    <div class="first-index">
-        <div class="first-index__wrap">
-            <div class="first-index__title">
-                <span data-aos="fade-up">MARKER</span>
+    <div class="third-index">
+        <div class="third-index__wrap">
+            <div class="third-index__title">
+                <span data-aos="fade-up">CONTENT</span>
             </div>
-            <div class="first-index__content" data-aos="fade-up" data-aos-delay="200">
-                <div class="first-index__content__left">
+            <div class="third-index__content" data-aos="fade-up" data-aos-delay="200">
+                <div class="third-index__content__right">
+                </div>
+                <div class="third-index__content__left">
                     <div class="left-wrap">
                         <div class="left-wrap__text">
-                            <h1>자유로운 형태의<br> 마커를 올려보세요.</h1>
-                            <p>지도 위에 마커를 올려서 특정 장소를 <br> 표시할 수 있고
-                                장소 명칭이나 간단한 소개글도 <br> 함께 표시할 수 있습니다.
+                            <h1>원하는 컨텐츠를<br> 표시할 수 있습니다.</h1>
+                            <p>지도 위에 HTML로 구현 가능한 모든 컨텐츠를 <br>올릴수 있습니다. 
+                                CSS를 이용하여 자유롭게 <br>꾸며보세요.
                             </p>
                         </div>
                         <v-btn class="sample-btn">
@@ -20,8 +22,6 @@
                             </v-icon>
                         </v-btn>
                     </div>
-                </div>
-                <div class="first-index__content__right">
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .first-index {
+    .third-index {
         position: relative;
         width: 100%;
         height: 100vh;
@@ -57,7 +57,7 @@ export default {
             &__left {
                 width: 600px;
                 height: 650px;
-                background: url("@/assets/img/first-back.png");
+                background: url("@/assets/img/third-back.png");
 
                 .left-wrap {
                     display: flex;
@@ -66,7 +66,7 @@ export default {
                     padding: 80px;
                     height: 100%;
                     &__text {
-                        color: #fff;
+                        color: #000;
                         >h1 {
                             font-family: 'notosanskr', sans-serif;
                             font-size: 55px;
@@ -82,7 +82,6 @@ export default {
                         width: 280px; 
                         height: 60px;
                         padding: 0 30px;
-                        border: 2px solid #fff;
                         border-radius: 40px;
                         color: #fff;
                         background: #75A2FF;

@@ -1,16 +1,16 @@
 <template>
-    <div class="first-index">
-        <div class="first-index__wrap">
-            <div class="first-index__title">
-                <span data-aos="fade-up">MARKER</span>
+    <div class="fourth-index">
+        <div class="fourth-index__wrap">
+            <div class="fourth-index__title">
+                <span data-aos="fade-up">WEB / MOBILE</span>
             </div>
-            <div class="first-index__content" data-aos="fade-up" data-aos-delay="200">
-                <div class="first-index__content__left">
+            <div class="fourth-index__content" data-aos="fade-up" data-aos-delay="200">
+                <div class="fourth-index__content__left">
                     <div class="left-wrap">
                         <div class="left-wrap__text">
-                            <h1>자유로운 형태의<br> 마커를 올려보세요.</h1>
-                            <p>지도 위에 마커를 올려서 특정 장소를 <br> 표시할 수 있고
-                                장소 명칭이나 간단한 소개글도 <br> 함께 표시할 수 있습니다.
+                            <h1>모든 모바일 웹 <br>환경을 지원합니다.</h1>
+                            <p>스마트폰이나 태블릿 등 터치 디바이스의 <br>웹 브라우저에서도
+                                모든 기능을 동일하게 <br>이용하실 수 있습니다.
                             </p>
                         </div>
                         <v-btn class="sample-btn">
@@ -21,7 +21,8 @@
                         </v-btn>
                     </div>
                 </div>
-                <div class="first-index__content__right">
+                <div class="fourth-index__content__right">
+                    <img src="@/assets/img/mobile-web.png" alt="">
                 </div>
             </div>
         </div>
@@ -34,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .first-index {
+    .fourth-index {
         position: relative;
         width: 100%;
         height: 100vh;
@@ -57,7 +58,7 @@ export default {
             &__left {
                 width: 600px;
                 height: 650px;
-                background: url("@/assets/img/first-back.png");
+                background: url("@/assets/img/fourth-back.png");
 
                 .left-wrap {
                     display: flex;
@@ -94,7 +95,13 @@ export default {
                 width: 600px;
                 height: 650px;
                 background: #fff;
-                background: url("@/assets/img/marker-map.png");
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: url("@/assets/img/mobile-web-blur.png");
+                >img {
+                    width: 500px;
+                }
             }
         }
     }
