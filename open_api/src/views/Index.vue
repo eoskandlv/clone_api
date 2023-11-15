@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div class="index">
+        <Sidebar />
         <MainHead />
         <FirstIndex />
         <SecondIndex />
@@ -11,6 +12,8 @@
 </template>
 
 <script>
+// @ts-ignore
+import Sidebar from "@/components/common/SideBar.vue";
 import MainHead from "@/components/index/MainHead.vue";
 import FirstIndex from "@/components/index/FirstIndex.vue";
 import SecondIndex from "@/components/index/SecondIndex.vue";
@@ -25,10 +28,14 @@ export default {
         SecondIndex,
         ThirdIndex,
         FourthIndex,
-        FifthIndex
+        FifthIndex,
+        Sidebar
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.index {
+    font-family: 'Montserrat', sans-serif;
+}
 </style>

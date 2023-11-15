@@ -4,25 +4,30 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    name: "home",
+    {
+        path: "/",
+        name: "home",
         component: () => import("@/views/PageGuard.vue"),
-     children: [
-        {
-            path: "",
-            name: "index",
-            component: () => import("@/views/Index.vue"),
-        },   
-    ]
-  },
+        children: [
+            {
+                path: "index",
+                name: "index",
+                component: () => import("@/views/Index.vue"),
+            },   
+            {
+                path: "guide",
+                name: "guide",
+                component: () => import("@/views/GuidePage.vue"),
+            },   
+        ]
+    },
 ];
 
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes,
 });
 
 

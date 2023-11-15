@@ -10,7 +10,7 @@
 <template>
     <div>
         <HomeBar />
-        <Sidebar />
+        <!-- <Sidebar /> -->
         <v-main class="user-view-guard">
             <router-view/>
         </v-main>
@@ -19,15 +19,12 @@
 
 <script>
 // @ts-ignore
-import Sidebar from "@/components/common/SideBar.vue";
-// @ts-ignore
 import HomeBar from "@/components/common/HomeBar.vue";
 
 export default {
     components: {
         // Sidebar,
         HomeBar,
-        Sidebar
     },
 }
 </script>

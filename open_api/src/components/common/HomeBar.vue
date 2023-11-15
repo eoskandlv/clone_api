@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="homebar-wrap__item">
-                <router-link to="/" class="homebar-wrap__menu">
+                <router-link to="/index" class="homebar-wrap__menu" >
                     <div class="homebar-wrap__icon">
                         <v-icon
                             class="icon-color"
@@ -28,7 +28,7 @@
                 </router-link>
             </div>
             <div class="homebar-wrap__item">
-                <div class="homebar-wrap__menu">
+                <router-link to="guide" class="homebar-wrap__menu">
                     <div class="homebar-wrap__icon">
                         <v-icon
                             class="icon-color"
@@ -37,7 +37,7 @@
                         </v-icon>
                         Guide
                     </div>
-                </div>
+                </router-link>
             </div>
             <div class="homebar-wrap__item">
                 <div class="homebar-wrap__menu">
@@ -95,10 +95,6 @@
 export default {
 	data() {
 		return {
-			routeMapping: {
-				"webManage": 0,
-				"businessManage": 2,
-			}
 		}
 	},
 	mounted() {
@@ -109,7 +105,6 @@ export default {
         }
 	},
 	methods: {
-		
 	}
 }
 </script>
@@ -120,6 +115,8 @@ export default {
 		left: 0;
 		width: 86px;
         z-index: 1;
+        font-family: 'Montserrat', sans-serif;
+
 	}
 	.homebar-wrap {
 		width: 100%;

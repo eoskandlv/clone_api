@@ -23,6 +23,7 @@
                     <p data-aos="fade-up">ERP와 함께 확장형으로 운용할 수 있는 머신러닝 기반의 MaaS 플랫폼을 통해 한 단계 업그레이드하세요.</p>
                     <v-btn
                         class="button"
+                        @click="moveLink('https://dailybutton.co.kr/')"
                     >
                         Let`s go
                     </v-btn>
@@ -34,6 +35,20 @@
 
 <script>
 export default {
+    methods: {
+        /**********************************************************************
+         *  @method     : 링크 이동
+         *  @param      { link }
+         *  @returns    { undefined }
+         *********************************************************************/
+        moveLink(link) {
+            if (link === "no") {
+                alert("출시 준비중입니다.");
+                return;
+            }
+            window.open(link, "_blank");
+        }
+    }
 }
 </script>
 
