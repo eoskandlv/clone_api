@@ -100,7 +100,11 @@ export default {
             selectedSection: ''
         }
     },
+    created() {
+        this.defaultSection()
+    },
     mounted() {
+        window.addEventListener('load', this.detectCurrentSection);
         window.addEventListener('scroll', this.detectCurrentSection);
     },
     beforeDestroy() {
@@ -108,12 +112,11 @@ export default {
     },
     methods: {
          /**********************************************************************
-         *  @method     : 스크롤 시 현재 섹션 감지
+         *  @method     : 현재 섹션 감지
          *  @returns    { undefined }
          *********************************************************************/
         detectCurrentSection() {
             const sections = ['main-head', 'first-index', 'second-index', 'third-index', 'fourth-index', 'fifth-index'];
-
             for (const section of sections) {
                 const element = document.querySelector("." + section);
                 if (element) {
@@ -135,7 +138,15 @@ export default {
             window.scrollTo({ top: posY, behavior: 'smooth' })
           
         },
-        
+        /**********************************************************************
+         *  @method     : 01 섹션 디폴트 감지
+         *  @returns    { undefined }
+         *********************************************************************/
+        defaultSection() {
+            if(this.$router.history.current.path == '/index') {
+                return this.selectedSection = 'main-head'
+            }
+        }
     }
 }
 </script>

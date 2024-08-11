@@ -11,9 +11,9 @@
 	<div class="homebar">
         <div class="homebar-wrap">
             <div class="homebar-wrap__logo">
-                <div class="homebar-wrap__menu">
+                <!-- <div class="homebar-wrap__menu"> -->
                     DAILY<br>BUTTON
-                </div>
+                <!-- </div> -->
             </div>
             <div class="homebar-wrap__item">
                 <router-link to="/index" class="homebar-wrap__menu" >
@@ -125,7 +125,9 @@ export default {
         overflow-x: hidden;
         overflow-y: auto;
         &__logo {
-            color: #7e8788;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
         }
         &__item {
             background: #75A2FF;
